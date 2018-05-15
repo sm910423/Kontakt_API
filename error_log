@@ -1,0 +1,88 @@
+[18-Jul-2016 16:26:09 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 65
+[19-Jul-2016 04:43:59 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 136
+[19-Jul-2016 04:47:01 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 136
+[19-Jul-2016 04:48:16 UTC] PHP Fatal error:  Call to undefined method Customer_Model::facebookSignup() in /home/hoppers/public_html/Hopper/application/controllers/customer.php on line 184
+[19-Jul-2016 04:49:46 UTC] PHP Fatal error:  Call to undefined method Customer_Model::facebookSignup() in /home/hoppers/public_html/Hopper/application/controllers/customer.php on line 184
+[19-Jul-2016 17:24:11 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[19-Jul-2016 17:28:00 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 13:16:37 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 204
+[04-Aug-2016 13:17:29 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 204
+[04-Aug-2016 16:49:12 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 16:49:22 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 16:52:20 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 16:52:32 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 16:55:07 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 190
+[04-Aug-2016 16:58:28 UTC] PHP Fatal error:  Cannot redeclare Customer_Model::getBusinessinfo() in /home/hoppers/public_html/Hopper/application/models/customer_model.php on line 196
+[22-Dec-2016 01:55:07 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 84
+[22-Dec-2016 04:28:51 UTC] PHP Fatal error:  Call to undefined method User_Model::getHireinfo() in /home/hoppers/public_html/API_HireABubby/application/controllers/user.php on line 145
+[22-Dec-2016 04:31:20 UTC] PHP Fatal error:  Call to undefined method User_Model::getHireinfo() in /home/hoppers/public_html/API_HireABubby/application/controllers/user.php on line 145
+[24-Dec-2016 09:49:19 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 83
+[24-Dec-2016 09:49:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 83
+[24-Dec-2016 09:49:37 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 176
+[03-Jan-2017 04:39:35 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:43:46 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:44:19 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:46:12 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:47:29 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:48:41 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:49:36 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 04:49:40 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 09:57:09 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 11:09:29 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 11:10:34 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 200
+[03-Jan-2017 11:59:35 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 214
+[03-Jan-2017 12:00:09 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 214
+[03-Jan-2017 12:54:13 UTC] PHP Fatal error:  Cannot redeclare User_Model::getBookinginfo() in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 206
+[03-Jan-2017 12:54:17 UTC] PHP Fatal error:  Cannot redeclare User_Model::getBookinginfo() in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 206
+[03-Jan-2017 12:55:15 UTC] PHP Fatal error:  Cannot redeclare User_Model::getBookinginfo() in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 206
+[03-Jan-2017 12:56:42 UTC] PHP Fatal error:  Cannot redeclare User_Model::getBookinginfo() in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 206
+[03-Jan-2017 12:57:48 UTC] PHP Fatal error:  Cannot redeclare User_Model::getBookinginfo() in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 206
+[03-Jan-2017 18:55:24 UTC] PHP Fatal error:  Call to undefined method User_Model::managerFacebookSignup() in /home/hoppers/public_html/API_HireABubby/application/controllers/user.php on line 411
+[03-Jan-2017 20:26:04 UTC] PHP Fatal error:  Call to undefined method User_Model::managerFacebookSignup() in /home/hoppers/public_html/API_HireABubby/application/controllers/user.php on line 411
+[03-Jan-2017 20:43:13 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 101
+[03-Jan-2017 20:44:19 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 101
+[03-Jan-2017 20:51:54 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/API_HireABubby/application/models/user_model.php on line 101
+[09-Mar-2017 23:23:36 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 53
+[10-Mar-2017 04:03:48 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 53
+[10-Mar-2017 04:53:41 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 53
+[16-Mar-2017 01:43:40 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 107
+[16-Mar-2017 01:45:03 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 107
+[16-Mar-2017 01:45:33 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 107
+[16-Mar-2017 01:46:41 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 107
+[22-Mar-2017 22:02:42 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:02:45 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:03:00 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:04:11 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:05:11 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:05:35 UTC] PHP Parse error:  syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 61
+[22-Mar-2017 22:08:43 UTC] PHP Fatal error:  Call to undefined method User_Model::updateUser() in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 60
+[22-Mar-2017 22:08:57 UTC] PHP Fatal error:  Call to undefined method User_Model::updateUser() in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 60
+[27-Mar-2017 08:40:08 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 08:40:45 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 08:44:07 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 08:44:12 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 09:04:02 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 09:04:10 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 178
+[27-Mar-2017 09:04:20 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 192
+[27-Mar-2017 09:04:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 192
+[27-Mar-2017 09:05:42 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 192
+[27-Mar-2017 09:06:25 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 192
+[27-Mar-2017 09:06:28 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 192
+[27-Mar-2017 09:15:02 UTC] PHP Fatal error:  Call to undefined method User_Model::getFollower() in /home/hoppers/public_html/api_MunchScoutApp/application/controllers/user.php on line 285
+[28-Mar-2017 15:09:01 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 174
+[28-Mar-2017 15:11:17 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 174
+[30-Mar-2017 03:49:19 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:49:21 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:49:53 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:49:56 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:50:01 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:51:15 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:53:39 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:54:18 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:54:20 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:55:25 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 03:57:15 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 04:01:14 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 04:25:03 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 04:29:21 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
+[30-Mar-2017 04:30:54 UTC] PHP Fatal error:  Non-abstract method User_Model::postFeed() must contain body in /home/hoppers/public_html/api_MunchScoutApp/application/models/user_model.php on line 128
