@@ -47,14 +47,14 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-$islocal = 0;
+$islocal = 1;
 
 if ($islocal) {
 
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = '';
-	$db['default']['database'] = 'hairflip';
+	$db['default']['database'] = 'wp_kontaktsite';
 	$db['default']['dbdriver'] = 'mysqli';
 	$db['default']['dbprefix'] = '';
 	$db['default']['pconnect'] = TRUE;

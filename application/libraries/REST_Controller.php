@@ -933,7 +933,7 @@ abstract class REST_Controller extends CI_Controller
         	parse_str(parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY), $head);
 
         	// Merge both the URI segments and HEAD params
-        	$this->_head_args = array_merge($this->_head_args, $head);
+			$this->_head_args = array_merge($this->_head_args, $head);
         }
 
         /**
@@ -1017,10 +1017,10 @@ abstract class REST_Controller extends CI_Controller
         public function head($key = null, $xss_clean = true)
         {
         	if ($key === null) {
-        		return $this->head_args;
+        		return $this->_head_args;
         	}
 
-        	return array_key_exists($key, $this->head_args) ? $this->_xss_clean($this->head_args[$key], $xss_clean) : false;
+        	return array_key_exists($key, $this->_head_args) ? $this->_xss_clean($this->_head_args[$key], $xss_clean) : false;
         }
 
         /**
