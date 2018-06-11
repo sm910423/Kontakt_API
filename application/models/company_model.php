@@ -350,5 +350,5 @@ class Company_Model extends CI_Model
 	}
 }
 
-/* End of file user.php */
-/* Location: ./application/models/user.php */
+/* End of file company.php */
+/* Location: ./application/models/company.php */
