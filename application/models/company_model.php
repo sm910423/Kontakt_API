@@ -42,8 +42,11 @@ class Company_Model extends CI_Model
 		return false;
 	}
 
-	function getListByMost() {
+	function getListByMost($limit) {
 		$strQuery = "SELECT id, title, email, phone, site, wp_listing.call FROM wp_listing ORDER BY wp_listing.call DESC";
+		if ($limit != "-1") {
+			$strQuery .= " LIMIT $limit";
+		}
 			
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -52,8 +55,11 @@ class Company_Model extends CI_Model
 		return array();
 	}
 
-	function getListByFeatured() {
+	function getListByFeatured($limit) {
 		$strQuery = "SELECT id, title, email, phone, site FROM wp_listing WHERE featured='1'";
+		if ($limit != "-1") {
+			$strQuery .= " LIMIT $limit";
+		}
 			
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -62,8 +68,11 @@ class Company_Model extends CI_Model
 		return array();
 	}
 
-	function getListByTime() {
+	function getListByTime($limit) {
 		$strQuery = "SELECT id, title, email, phone, site FROM wp_listing ORDER BY created DESC";
+		if ($limit != "-1") {
+			$strQuery .= " LIMIT $limit";
+		}
 			
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())

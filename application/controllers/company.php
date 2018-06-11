@@ -12,6 +12,7 @@ class Company extends REST_Controller
 	public function list_post() {
 		$kind = $this->post("kind");
 		$email = $this->post("email");
+		$limit = $this->post("limit");
 		
 		if (!$kind || !$email || !$this->company_model->isExistUser($email)) {
 			$this->sendError();
@@ -19,11 +20,11 @@ class Company extends REST_Controller
 		
 		$result;
 		if ($kind == "most") {
-			$result = $this->company_model->getListByMost();
+			$result = $this->company_model->getListByMost($limit);
 		} else if ($kind == "featured") {
-			$result = $this->company_model->getListByFeatured();
+			$result = $this->company_model->getListByFeatured($limit);
 		} else if ($kind == "new") {
-			$result = $this->company_model->getListByTime();
+			$result = $this->company_model->getListByTime($limit);
 		}
 		
 		if ($result) {
