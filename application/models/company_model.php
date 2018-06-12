@@ -80,6 +80,36 @@ class Company_Model extends CI_Model
 
 		return array();
 	}
+
+	function getListBySubCategory($sub_category_id) {
+		$strQuery = "SELECT id, title, email, phone, site FROM wp_listing WHERE sub_category_id='$sub_category_id'";
+			
+		$query = $this->db->query($strQuery);
+		if ($query->num_rows())
+			return $this->convertKeyValue($query->result_array());
+
+		return array();
+	}
+
+	function getCategories() {
+		$strQuery = "SELECT * FROM wp_category WHERE id>0";
+			
+		$query = $this->db->query($strQuery);
+		if ($query->num_rows())
+			return $this->convertKeyValue($query->result_array());
+
+		return array();
+	}
+
+	function getSubCategories($category_id) {
+		$strQuery = "SELECT * FROM wp_sub_category WHERE category_id='$category_id'";
+			
+		$query = $this->db->query($strQuery);
+		if ($query->num_rows())
+			return $this->convertKeyValue($query->result_array());
+
+		return array();
+	}
 	
 	function increaseCallNumber($id)
 	{
