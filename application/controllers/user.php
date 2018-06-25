@@ -9,7 +9,7 @@ class User extends REST_Controller
 		$this->load->model('user_model');
 	}
 	
-	public function user_signup_post(){
+	public function user_signup_post() {
 		if (!$this->post("email"))
 			$this->sendError();
 			
@@ -37,8 +37,7 @@ class User extends REST_Controller
 		$this->sendError();
 	}
 	
-	public function user_update_profile_post()
-	{
+	public function user_update_profile_post() {
 		if (!$this->post("userid"))
 			$this->sendError();
 			
@@ -85,8 +84,7 @@ class User extends REST_Controller
 		$this->sendError(ERR_USER_UPDATE_FAILED);
 	}
 
-	public function user_login_post()
-	{
+	public function user_login_post() {
 		if (!$this->post("email") || !$this->post("password"))
 			$this->sendError();
 

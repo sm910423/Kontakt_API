@@ -53,9 +53,9 @@ class Community_Model extends CI_Model
 	function getListByTime($limit) {
 		$strQuery;
 		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, content FROM wp_community ORDER BY time DESC";
+            $strQuery = "SELECT id, title, content FROM wp_community ORDER BY created DESC";
 		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_community ORDER BY time DESC LIMIT $limit";
+            $strQuery = "SELECT id, title, image, created FROM wp_community ORDER BY created DESC LIMIT $limit";
         }
 			
 		$query = $this->db->query($strQuery);
