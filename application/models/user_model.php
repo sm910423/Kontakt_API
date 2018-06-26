@@ -20,9 +20,9 @@ class User_Model extends CI_Model
 		return false;
 	}
 	
-	function signupUser($email, $password, $phonenumber)
+	function signupUser($email, $password, $phonenumber, $fullname)
 	{
-		$this->db->insert("wp_users", array("user_email"=>$email, "user_pass"=>$password));
+		$this->db->insert("wp_users", array("user_email"=>$email, "user_pass"=>$password, "user_nicename"=>$fullname));
 		if ($this->db->affected_rows()){
 			$userid = $this->db->insert_id();
 			$this->db->insert("wp_usermeta", array("user_id"=>$userid, "meta_key"=> "billing_phone", "meta_value"=> $phonenumber));

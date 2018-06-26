@@ -18,6 +18,7 @@ class User extends REST_Controller
 			$this->sendError(ERR_USER_EMAIL_DUPLICATE);			
 		
 		$phonenumber = $this->post("phonenumber");
+		$fullname = $this->post("fullname");
 		$password = md5($this->post("password"));
 
 		$token = "";
@@ -27,7 +28,7 @@ class User extends REST_Controller
 		if ($this->post("devicetype")) 		
 			$devicetype = 1;
 		
-		$result = $this->user_model->signupUser($email, $password, $phonenumber);
+		$result = $this->user_model->signupUser($email, $password, $phonenumber, $fullname);
 		if ($result)
 		{
 			$info = $this->user_model->getUserinfo($email);
