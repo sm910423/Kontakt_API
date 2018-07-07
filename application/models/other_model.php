@@ -3,7 +3,7 @@
 /**
  * Tag Model Class
  */
-class Community_Model extends CI_Model 
+class Other_Model extends CI_Model 
 {
 	function __construct()
 	{
@@ -20,17 +20,12 @@ class Community_Model extends CI_Model
 		return false;
 	}
 
-	function getListByMost($limit) {
-		$strQuery;
-		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_community ORDER BY wp_community.call DESC";
-		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_community ORDER BY wp_community.call DESC LIMIT $limit";
-        }
+	function getAbout() {
+        $strQuery = "SELECT * FROM wp_aboutus WHERE id>0";
 			
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
-			return $this->convertKeyValue($query->result_array());
+			return $this->convertKeyValue($query->row_array());
 
 		return array();
 	}
@@ -38,7 +33,7 @@ class Community_Model extends CI_Model
 	function getListByFeatured($limit) {
 		$strQuery;
 		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_community WHERE featured='1'";
+            $strQuery = "SELECT id, title, content FROM wp_community WHERE featured='1'";
 		} else {
             $strQuery = "SELECT id, title, image, created FROM wp_community WHERE featured='1' LIMIT $limit";
         }
@@ -46,41 +41,6 @@ class Community_Model extends CI_Model
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
 			return $this->convertKeyValue($query->result_array());
-
-		return array();
-	}
-
-	function getListByTime($limit) {
-		$strQuery;
-		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_community ORDER BY created DESC";
-		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_community ORDER BY created DESC LIMIT $limit";
-        }
-			
-		$query = $this->db->query($strQuery);
-		if ($query->num_rows())
-			return $this->convertKeyValue($query->result_array());
-
-		return array();
-	}
-	
-	function increaseCallNumber($id)
-	{
-		$strQuery = "UPDATE wp_community SET wp_community.call=wp_community.call+1 WHERE id=$id";
-		if ($this->db->query($strQuery))
-			return true;
-
-		return false;
-	}
-
-	function getDetailsByID($id) {
-        $strQuery = "SELECT * FROM wp_community WHERE id=$id";
-			
-        $query = $this->db->query($strQuery);
-
-        if ($query->num_rows())
-			return $this->convertKeyValue($query->row_array());
 
 		return array();
 	}
