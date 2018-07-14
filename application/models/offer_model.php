@@ -23,9 +23,9 @@ class Offer_Model extends CI_Model
 	function getListByMost($limit) {
 		$strQuery;
 		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_offer ORDER BY wp_offer.call DESC";
+            $strQuery = "SELECT id, title, image FROM wp_offers ORDER BY wp_offers.call DESC";
 		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_offer ORDER BY wp_offer.call DESC LIMIT $limit";
+            $strQuery = "SELECT id, title, image, created FROM wp_offers ORDER BY wp_offers.call DESC LIMIT $limit";
         }
 			
 		$query = $this->db->query($strQuery);
@@ -38,9 +38,9 @@ class Offer_Model extends CI_Model
 	function getListByFeatured($limit) {
 		$strQuery;
 		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_offer WHERE featured='1'";
+            $strQuery = "SELECT id, title, image FROM wp_offers WHERE featured='1'";
 		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_offer WHERE featured='1' LIMIT $limit";
+            $strQuery = "SELECT id, title, image, created FROM wp_offers WHERE featured='1' LIMIT $limit";
         }
 			
 		$query = $this->db->query($strQuery);
@@ -53,9 +53,9 @@ class Offer_Model extends CI_Model
 	function getListByTime($limit) {
 		$strQuery;
 		if ($limit == "-1") {
-            $strQuery = "SELECT id, title, image FROM wp_offer ORDER BY created DESC";
+            $strQuery = "SELECT id, title, image FROM wp_offers ORDER BY created DESC";
 		} else {
-            $strQuery = "SELECT id, title, image, created FROM wp_offer ORDER BY created DESC LIMIT $limit";
+            $strQuery = "SELECT id, title, image, created FROM wp_offers ORDER BY created DESC LIMIT $limit";
         }
 			
 		$query = $this->db->query($strQuery);
@@ -67,7 +67,7 @@ class Offer_Model extends CI_Model
 	
 	function increaseCallNumber($id)
 	{
-		$strQuery = "UPDATE wp_offer SET wp_offer.call=wp_offer.call+1 WHERE id=$id";
+		$strQuery = "UPDATE wp_offers SET wp_offers.call=wp_offers.call+1 WHERE id=$id";
 		if ($this->db->query($strQuery))
 			return true;
 
@@ -75,7 +75,7 @@ class Offer_Model extends CI_Model
 	}
 
 	function getDetailsByID($id) {
-        $strQuery = "SELECT * FROM wp_offer WHERE id=$id";
+        $strQuery = "SELECT * FROM wp_offers WHERE id=$id";
 			
         $query = $this->db->query($strQuery);
 
