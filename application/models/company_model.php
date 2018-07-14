@@ -81,12 +81,38 @@ class Company_Model extends CI_Model
 		return array();
 	}
 
-	function getListBySubCategory($sub_category_id) {
+	/*function getListBySubCategory($sub_category_id) {
 		$strQuery = "SELECT id, title, email, phone, site FROM wp_listing WHERE sub_category_id='$sub_category_id'";
 			
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
 			return $this->convertKeyValue($query->result_array());
+
+		return array();
+	}*/
+
+	function getListBySubCategory($sub_category_id) {
+		$strQuery = "SELECT id, title, email, phone, site, sub_category_id, sub_categories FROM wp_listing WHERE id>0";
+		$query = $this->db->query($strQuery);
+
+		if ($query->num_rows()) {
+			$result = array();
+			$array = $query->result_array();
+			foreach ($array as $item) {
+				if ($item["sub_category_id"] == $sub_category_id) {
+					array_push($result, $item);
+				} else {
+					$sub_categories = $item["sub_categories"];
+					if ($sub_categories) {
+						$arr = explode(',', $sub_categories);
+						if (array_search($sub_category_id, $arr) !== false) {
+							array_push($result, $item);
+						}
+					}
+				}
+			}
+			return $this->convertKeyValue($result);
+		}
 
 		return array();
 	}
@@ -111,8 +137,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function increaseCallNumber($id)
-	{
+	function increaseCallNumber($id) {
 		$strQuery = "UPDATE wp_listing SET wp_listing.call=wp_listing.call+1  WHERE id=$id";
 		if ($this->db->query($strQuery))
 			return true;
@@ -130,8 +155,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function setEmailVerifyCode($email, $emailverifycode)
-	{
+	function setEmailVerifyCode($email, $emailverifycode) {
 		$this->db->update("tbl_User", array("emailverifycode"=>$emailverifycode), array("email"=>$email));
 		if ($this->db->affected_rows())
 			return true;
@@ -139,8 +163,7 @@ class Company_Model extends CI_Model
 		return false;
 	}
 	
-	function checkEmailVerifyCode($email, $emailverifycode)
-	{
+	function checkEmailVerifyCode($email, $emailverifycode) {
 		$strQuery = "SELECT userid, email, fullname, photourl, phonenumber, emailverifycode, verify_state ";
 		$strQuery .= "FROM tbl_User WHERE email LIKE '$email' ";
 		$query = $this->db->query($strQuery);
@@ -157,8 +180,7 @@ class Company_Model extends CI_Model
 		return ERR_CUSTOMER_NOT_FOUND;
 	}
 	
-	function userFacebookSignup($params)
-	{
+	function userFacebookSignup($params) {
 		$this->db->insert("tbl_User", $params);
 		if ($this->db->affected_rows())
 			return $this->db->insert_id();
@@ -166,8 +188,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function getFacebookUserInfo($facebookid)
-	{
+	function getFacebookUserInfo($facebookid) {
 		$strQuery = "SELECT userid, email, fullname, photourl, phonenumber ";
 		$strQuery .= "FROM tbl_User WHERE facebookid = '$facebookid' ";
 		$query = $this->db->query($strQuery);
@@ -177,8 +198,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function getCuisineList()
-	{
+	function getCuisineList() {
 		$strQuery = "SELECT * FROM tbl_Cuisine ORDER BY cuisineid ASC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -195,8 +215,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function getFeedinfo($feedtime)
-	{
+	function getFeedinfo($feedtime) {
 		$strQuery = "SELECT feedid, posterid, restaurant_name, restaurant_address, latitude, longitude, cuisine, dish_name, caption, feed_time, postlink ";
 		$strQuery .= "FROM tbl_Feed WHERE ";
 		if ($feedtime)
@@ -209,8 +228,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function getFeedList()
-	{
+	function getFeedList() {
 		$strQuery = "SELECT * FROM tbl_Feed as feed join (tbl_User as user) on user.userid = feed.posterid ORDER BY feed.feedid DESC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -219,8 +237,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function likeFeed($likerid, $likedfeedid)
-	{
+	function likeFeed($likerid, $likedfeedid) {
 		$this->db->insert("tbl_likefeed", array("likerid"=>$likerid, 
 			"likedfeedid"=>$likedfeedid));
 		if ($this->db->affected_rows())
@@ -229,8 +246,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function unlikeFeed($likerid, $likedfeedid)
-	{
+	function unlikeFeed($likerid, $likedfeedid) {
 		$this->db->delete("tbl_likefeed", array("likerid"=>$likerid, 
 			"likedfeedid"=>$likedfeedid));
 		if ($this->db->affected_rows())
@@ -239,8 +255,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function getLikedFeed($userid, $pageidx)
-	{
+	function getLikedFeed($userid, $pageidx) {
 		$strQuery = "SELECT * FROM tbl_likefeed as likefeed join (tbl_User as user, tbl_Feed as feed) on user.userid = feed.posterid and feed.feedid = likefeed.likedfeedid ORDER BY likefeed.likefeedid DESC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -249,8 +264,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function followUser($fuserid, $tuserid)
-	{
+	function followUser($fuserid, $tuserid) {
 		$this->db->insert("tbl_followuser", array("fuserid"=>$fuserid, 
 			"tuserid"=>$tuserid));
 		if ($this->db->affected_rows())
@@ -259,8 +273,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function unfollowUser($fuserid, $tuserid)
-	{
+	function unfollowUser($fuserid, $tuserid) {
 		$this->db->delete("tbl_followuser", array("fuserid"=>$fuserid, 
 			"tuserid"=>$tuserid));
 		if ($this->db->affected_rows())
@@ -269,8 +282,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function getFollowing($userid, $pageidx)
-	{
+	function getFollowing($userid, $pageidx) {
 		$strQuery = "SELECT * FROM tbl_followuser as follow join (tbl_User as user) on user.userid = follow.tuserid WHERE fuserid = $userid ORDER BY follow.followid DESC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -279,8 +291,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function getFollower($userid, $pageidx)
-	{
+	function getFollower($userid, $pageidx) {
 		$strQuery = "SELECT * FROM tbl_followuser as follow join (tbl_User as user) on user.userid = follow.fuserid WHERE tuserid = $userid ORDER BY follow.followid DESC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -289,8 +300,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function blockUser($fuserid, $tuserid)
-	{
+	function blockUser($fuserid, $tuserid) {
 		$this->db->insert("tbl_blockuser", array("fuserid"=>$fuserid, 
 			"tuserid"=>$tuserid));
 		if ($this->db->affected_rows())
@@ -299,8 +309,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function unblockUser($fuserid, $tuserid)
-	{
+	function unblockUser($fuserid, $tuserid) {
 		$this->db->delete("tbl_blockuser", array("fuserid"=>$fuserid, 
 			"tuserid"=>$tuserid));
 		if ($this->db->affected_rows())
@@ -309,8 +318,7 @@ class Company_Model extends CI_Model
 		return 0;
 	}
 	
-	function getBlockUsers($userid, $pageidx)
-	{
+	function getBlockUsers($userid, $pageidx) {
 		$strQuery = "SELECT * FROM tbl_blockuser as block join (tbl_User as user) on user.userid = block.tuserid WHERE fuserid = $userid ORDER BY block.blockid DESC";
 		$query = $this->db->query($strQuery);
 		if ($query->num_rows())
@@ -319,8 +327,7 @@ class Company_Model extends CI_Model
 		return array();
 	}
 	
-	function setVerifyCode($bubbyid, $verifycode)
-	{
+	function setVerifyCode($bubbyid, $verifycode) {
 		$this->db->update("tbl_customer", array("ci_verifycode"=>$verifycode), array("bubbyid"=>$bubbyid));
 		if ($this->db->affected_rows())
 			return true;
@@ -328,8 +335,7 @@ class Company_Model extends CI_Model
 		return false;
 	}
 	
-	function checkVerifyCode($email, $verifycode)
-	{
+	function checkVerifyCode($email, $verifycode) {
 		$strQuery = "SELECT bubbyid, email, firstname, lastname, photourl, phonenumber, birthday, verifycode, paymentinfo, favoritelocation ";
 		$strQuery .= "FROM v_customer WHERE email LIKE '$email' ";
 		$query = $this->db->query($strQuery);
@@ -346,9 +352,7 @@ class Company_Model extends CI_Model
 		return ERR_CUSTOMER_NOT_FOUND;
 	}
 
-	
-	private function convertValue($array)
-	{
+	private function convertValue($array) {
 		$result = array();
 		if (count($array) < 1)
 		return $result;
@@ -368,8 +372,7 @@ class Company_Model extends CI_Model
 		return $result;
 	}
 
-	private function convertKeyValue($item)
-	{
+	private function convertKeyValue($item) {
 		foreach ($item as $key => $value)
 		{
 			if (is_null($value) || $value === null)

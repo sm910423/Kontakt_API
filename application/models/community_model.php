@@ -89,16 +89,16 @@ class Community_Model extends CI_Model
 	{
 		$result = array();
 		if (count($array) < 1)
-		return $result;
+			return $result;
 
 		foreach ($array as $item)
 		{
 			foreach ($item as $key => $value)
 			{
 				if (is_null($value) || $value === null)
-				$item[$key] = "";
+					$item[$key] = "";
 				else if (is_array($value))
-				$item[$key] = $this->convertValue($value);
+					$item[$key] = $this->convertValue($value);
 			}
 				
 			array_push($result, $item);
@@ -111,7 +111,7 @@ class Community_Model extends CI_Model
 		foreach ($item as $key => $value)
 		{
 			if (is_null($value) || $value === null)
-			$item[$key] = "";
+				$item[$key] = "";
 		}
 			
 		return $item;
